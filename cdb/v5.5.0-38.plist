@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://github.com/eddy-lau/ota/releases/download/cdb_5.5.0_37/ChineseDailyBread.ipa</string>
+					<string>https://github.com/eddy-lau/ota/releases/download/cdb_5.5.0_38/ChineseDailyBread.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
@@ -27,11 +27,11 @@
 				<key>bundle-identifier</key>
 				<string>org.hksu.ChineseDailyBread</string>
 				<key>bundle-version</key>
-				<string>5.5.0 (37)</string>
+				<string>5.5.0 (38)</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>每日讀經釋義 5.5.0 (37)</string>
+				<string>每日讀經釋義 5.5.0 (38)</string>
 			</dict>
 		</dict>
 	</array>
