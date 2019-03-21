@@ -4,85 +4,42 @@
     <link rel="apple-touch-icon" href="OTA-120.png">
     <meta charset="UTF-8">
     <title>每日讀經釋義</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <h1>每日讀經釋義 iOS App</h1>
 
-    <p>
-      <h3>Pre Release 6.0.1-75
-        (<a href="itms-services://?action=download-manifest&amp;url=https://github.com/eddy-lau/ota/releases/download/cdb_6.0.1_75/manifest.plist">Install</a>)
-      </h3>
-      <ul>
-        <li>修正2019年第一及第二季內容</li>
-      </ul>
-    </p>
-    <p>
-      <h3>Pre Release 6.0.0-74
-        (<a href="itms-services://?action=download-manifest&amp;url=https://eddy-lau.github.io/ota/cdb/v6.0.0-74-dev.plist">Install</a>)
-      </h3>
-      <ul>
-        <li>新增2019年第二季內容</li>
-        <li>統一為 "帳戶"</li>
-        <li>修正交易編號過長顯示問題</li>
-        <li>新增 UDID</li>
-      </ul>
-    </p>
-    <p>
-      <h3>Pre Release 5.7.1-47
-        (<a href="itms-services://?action=download-manifest&amp;url=https://eddy-lau.github.io/ota/cdb/v5.7.1-47-dev.plist">Install</a>)
-      </h3>
-      <ul>
-        <li>修正2019年第一季內容</li>
-      </ul>
-    </p>
-    <p>
-      <h3>Pre Release 5.6.0-41
-        (<a href="itms-services://?action=download-manifest&amp;url=https://eddy-lau.github.io/ota/cdb/v5.6.0-41-dev-64.plist">Install 64 bit</a>)
-        (<a href="itms-services://?action=download-manifest&amp;url=https://eddy-lau.github.io/ota/cdb/v5.6.0-41-dev-32.plist">Install 32 bit</a>)
-      </h3>
-      <ul>
-        <li>修正2018年第四季內容</li>
-      </ul>
-    </p>
-    <p>
-      <h3>Pre Release 5.5.0-38 (<a href="itms-services://?action=download-manifest&amp;url=https://eddy-lau.github.io/ota/cdb/v5.5.0-38.plist">Install</a>)</h3>
-      <ul>
-        <li>新增2018年第三季內容</li>
-      </ul>
-    </p>
-    <p>
-      <h3>Pre Release 5.4.0-35 (<a href="itms-services://?action=download-manifest&amp;url=https://eddy-lau.github.io/ota/cdb/v5.4.0-35.plist">Install</a>)</h3>
-      <ul>
-        <li>新增2018年第二季內容</li>
-        <li>書架顯示已購項目</li>
-      </ul>
-    </p>
-    <p>
-      <h3>Pre Release 5.3.0-32 (<a href="itms-services://?action=download-manifest&amp;url=https://eddy-lau.github.io/ota/cdb/v5.3.0-32.plist">Install</a>)</h3>
-      <h3>Pre Release 5.3.0-32 (Dev) (<a href="itms-services://?action=download-manifest&amp;url=https://eddy-lau.github.io/ota/cdb/v5.3.0-32-dev.plist">Install</a>)</h3>
-      <ul>
-        <li>新增2018年第一季內容</li>
-        <li>新增字體選擇</li>
-      </ul>
-    </p>
-    <p>
-      <h3>App Store Release 5.2.3-30 (<a href="itms-services://?action=download-manifest&amp;url=https://eddy-lau.github.io/ota/cdb/v5.2.3-30.plist">Install</a>)</h3>
-      <ul>
-        <li>修正彈App問題</li>
-      </ul>
-    </p>
-    <p>
-      <h3>App Store Release 5.2.2-28 (<a href="itms-services://?action=download-manifest&amp;url=https://eddy-lau.github.io/ota/cdb/v5.2.2-28.plist">Install</a>)</h3>
-      <ul>
-        <li>修正 Dropbox 同步問題</li>
-        <li>支援 iPhone X</li>
-      </ul>
-    </p>
-    <p>
-      <h3>App Store Release 5.2.0-2 (<a href="itms-services://?action=download-manifest&amp;url=https://eddy-lau.github.io/ota/cdb/v5.2.0-2.plist">Install</a>)</h3>
-        <ul>
-          <li>新增2017第四季內容</li>
-        </ul>
-     </p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">每日讀經釋義 iOS App</a>
+    </nav>
+
+    <div id="app">
+
+      <div v-if="releases.length > 0" class="container">
+
+        <div v-for="r in releases" class="card mx-4 my-4">
+          <div class="card-header">
+              Pre Release {{ r.version }}-{{ r.buildNumber }}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <ul class="mb-4">
+              <li v-for="text in r.changes">{{ text }}</li>
+            </ul>
+            <a class="btn btn-primary" :href=" 'itms-services://?action=download-manifest&amp;url=https://github.com/eddy-lau/ota/releases/download/' + 'cdb_' + r.version + '_' + r.buildNumber + '/manifest.plist' ">Install</a>
+          </div>
+        </div>
+
+        <a href="old/index.html" class="mx-4 float-right">舊版本</a>
+
+      </div>
+
+    </div>
+
+    <script src="main.js"></script>
+
   </body>
 </body>

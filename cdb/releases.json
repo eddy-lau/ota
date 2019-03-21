@@ -1,0 +1,10 @@
+[
+  {
+    "version": "6.0.1",
+    "buildNumber": "76",
+    "changes": [
+      "修正2019年第一及第二季內容",
+      "由這版本開始轉用 Production DB"
+    ]
+  }
+]
