@@ -1,7 +1,8 @@
 var app = new Vue({
   el: '#app',
   data: {
-    appName: '',
+    appName: '每日讀經釋義',
+    githubRepo: 'eddy-lau/ota',
     releases: []
   }
 });
