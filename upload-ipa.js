@@ -7,22 +7,57 @@ var uploader = require('github-ipa-uploader');
 
 function updateReleasesJson(version, build) {
 
-  var releasesFilePath = path.join(__dirname, 'release.json');
+  var releasesFilePath = path.join(__dirname, 'releases.json');
 
   return new Promise( (resolve, reject) => {
 
-    fs.readFile(releasesFilePath, 'utf8', (err, data) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(data);
-      }
-    });
+    if (fs.existsSync(releasesFilePath)) {
+      fs.readFile(releasesFilePath, 'utf8', (err, data) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(data);
+        }
+      });
+    } else {
+      resolve('[]');
+    }
+
   }).then( data => {
 
     var releases = JSON.parse(data);
-    
+    releases = releases || [];
 
+    var existingRelease = releases.find( release => {
+      return release.version == version &&
+             release.buildNumber == build;
+    });
+
+    if (existingRelease) {
+      console.info('Not updating releases.json. Release info already exists');
+      return;
+    }
+
+    var latestRelease = releases[0];
+
+    var newRelease = {
+      version: version,
+      buildNumber: build,
+      changes: latestRelease ? latestRelease.changes : []
+    };
+
+    releases.splice(0, 0, newRelease);
+
+    return new Promise( (resolve, reject) => {
+      fs.writeFile(releasesFilePath, JSON.stringify(releases, null, 2), err => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve();
+        }
+      })
+
+    })
 
   });
 }
@@ -30,7 +65,7 @@ function updateReleasesJson(version, build) {
 
 
 var options = {
-  token: '7bad60430f074bcfaebf522cb68fb94a64b28767',
+  token: process.env.GITHUB_TOKEN,
   owner: 'eddy-lau',
   repo: 'ota',
   binaries: [{
@@ -43,10 +78,7 @@ var options = {
 uploader.upload(options)
 .then( result => {
   console.log('\n');
-
-
-
-  console.log(result);
+  return updateReleasesJson(result.version, result.buildNumber);
 }).catch( error => {
   console.error(error);
 });
