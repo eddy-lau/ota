@@ -55,9 +55,9 @@ function updateReleasesJson(version, build) {
         } else {
           resolve();
         }
-      })
+      });
 
-    })
+    });
 
   });
 }
@@ -70,7 +70,7 @@ var options = {
   repo: 'ota',
   binaries: [{
     path: path.join(__dirname,'..','ChineseDailyBread', 'ChineseDailyBreadAdhoc.ipa'),
-    iconURL: 'https://eddy-lau.github.io/ota/cdb/AppIcon-120x120.png'
+    iconURL: 'https://eddy-lau.github.io/cdb-ota/AppIcon-120x120.png'
   }],
   tagPrefix: 'cdb'
 };
