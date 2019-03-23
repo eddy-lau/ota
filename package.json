@@ -1,0 +1,14 @@
+{
+  "name": "cdb-ota",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eddie Lau",
+  "license": "ISC",
+  "dependencies": {
+    "github-ipa-uploader": "file:../github-ipa-uploader"
+  }
+}
