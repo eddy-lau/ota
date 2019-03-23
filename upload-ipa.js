@@ -3,7 +3,7 @@
 var fs = require('fs');
 var path = require('path');
 var uploader = require('github-ipa-uploader');
-
+var opn = require('opn');
 
 function updateReleasesJson(version, build) {
 
@@ -63,22 +63,87 @@ function updateReleasesJson(version, build) {
 }
 
 
+function githubOauth() {
 
-var options = {
-  token: process.env.GITHUB_TOKEN,
-  owner: 'eddy-lau',
-  repo: 'ota',
-  binaries: [{
-    path: path.join(__dirname,'..','ChineseDailyBread', 'ChineseDailyBreadAdhoc.ipa'),
-    iconURL: 'https://eddy-lau.github.io/cdb-ota/AppIcon-120x120.png'
-  }],
-  tagPrefix: 'cdb'
-};
+  return new Promise( (resolve, reject) => {
 
-uploader.upload(options)
-.then( result => {
+    const tokenFile = path.join(__dirname, '.github-token');
+
+    if (!fs.existsSync(tokenFile)) {
+
+      var githubOAuth = require('github-oauth')({
+        githubClient: 'ae455981dc2aa41e2b3e',
+        githubSecret: '24a6c88a02c0b17e14bf953c9eef3ea8016d2bc2',
+        baseURL: 'http://localhost',
+        loginURI: '/login',
+        callbackURI: '/callback',
+        scope: 'repo' // optional, default scope is set to user
+      });
+
+      var server = require('http').createServer(function(req, res) {
+        if (req.url.match(/login/)) return githubOAuth.login(req, res);
+        if (req.url.match(/callback/)) return githubOAuth.callback(req, res);
+      });
+
+      server.listen(80);
+
+      opn('http://localhost/login');
+
+      githubOAuth.on('error', function(err) {
+        reject(err);
+      });
+
+      githubOAuth.on('token', function(token, serverResponse) {
+
+        serverResponse.end('Done');
+        server.close();
+
+        fs.writeFile(tokenFile, token.access_token, (err)=> {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(token);
+          }
+        });
+
+      });
+
+
+    } else {
+
+      fs.readFile(tokenFile, 'utf8', (err, data) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(data);
+        }
+      });
+
+    }
+  });
+
+}
+
+
+githubOauth().then( token => {
+
+  var options = {
+    token: token,
+    owner: 'eddy-lau',
+    repo: 'cdb-ota',
+    binaries: [{
+      path: path.join(__dirname,'..','ChineseDailyBread', 'ChineseDailyBreadAdhoc.ipa'),
+      iconURL: 'https://eddy-lau.github.io/cdb-ota/AppIcon-120x120.png'
+    }],
+    tagPrefix: 'cdb'
+  };
+
+  return uploader.upload(options);
+}).then( result => {
   console.log('\n');
   return updateReleasesJson(result.version, result.buildNumber);
+}).then( () => {
+  process.exit();
 }).catch( error => {
   console.error(error);
 });
