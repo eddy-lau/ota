@@ -1,6 +1,13 @@
 [
   {
     "version": "6.0.1",
+    "buildNumber": "77",
+    "changes": [
+      "3月1日圖表放在第二段下。"
+    ]
+  },
+  {
+    "version": "6.0.1",
     "buildNumber": "76",
     "changes": [
       "修正2019年第一及第二季內容",
