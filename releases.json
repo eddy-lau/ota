@@ -1,18 +1,17 @@
 [
   {
+    "version": "6.1.0",
+    "buildNumber": "79",
+    "changes": [
+      "新增2019年第3季內容"
+    ]
+  },
+  {
     "version": "6.0.1",
     "buildNumber": "78",
     "changes": [
       "3月1日圖表放在第二段下。",
       "修正未登入時沒有購買記錄問題。"
-    ]
-  },
-  {
-    "version": "6.0.1",
-    "buildNumber": "76",
-    "changes": [
-      "修正2019年第一及第二季內容",
-      "由這版本開始轉用 Production DB"
     ]
   }
 ]
