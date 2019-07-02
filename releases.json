@@ -1,5 +1,12 @@
 [
   {
+    "version": "6.1.1",
+    "buildNumber": "83",
+    "changes": [
+      "修正2019年第3季內容"
+    ]
+  },
+  {
     "version": "6.1.0",
     "buildNumber": "82",
     "changes": [
