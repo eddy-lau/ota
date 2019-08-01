@@ -2,13 +2,15 @@
   {
     "version": "6.2.0",
     "buildNumber": "84",
+    "plist": "ChineseDailyBreadDev.plist",
     "changes": [
-      "新增兌換功能 (Development DB)",
+      "新增兌換功能"
     ]
   },
   {
     "version": "6.1.1",
     "buildNumber": "83",
+    "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
       "修正2019年第3季內容"
     ]
@@ -16,6 +18,7 @@
   {
     "version": "6.1.0",
     "buildNumber": "82",
+    "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
       "修正2019年第3季內容",
       "8月4日經文顯示問題尚待解決。"
@@ -24,6 +27,7 @@
   {
     "version": "6.1.0",
     "buildNumber": "80",
+    "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
       "新增2019年第3季內容",
       "修正歷代志上專文",
@@ -34,6 +38,7 @@
   {
     "version": "6.0.1",
     "buildNumber": "78",
+    "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
       "3月1日圖表放在第二段下。",
       "修正未登入時沒有購買記錄問題。"

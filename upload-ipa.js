@@ -5,7 +5,7 @@ var path = require('path');
 var uploader = require('github-ipa-uploader');
 var opn = require('opn');
 
-function updateReleasesJson(version, build) {
+function updateReleasesJson(version, build, plist) {
 
   var releasesFilePath = path.join(__dirname, 'releases.json');
 
@@ -43,6 +43,7 @@ function updateReleasesJson(version, build) {
     var newRelease = {
       version: version,
       buildNumber: build,
+      plist: plist,
       changes: latestRelease ? latestRelease.changes : []
     };
 
@@ -141,7 +142,7 @@ githubOauth().then( token => {
   return uploader.upload(options);
 }).then( result => {
   console.log('\n');
-  return updateReleasesJson(result.version, result.buildNumber);
+  return updateReleasesJson(result.version, result.buildNumber, result.plist);
 }).then( () => {
   process.exit();
 }).catch( error => {
