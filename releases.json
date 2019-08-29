@@ -1,6 +1,15 @@
 [
   {
     "version": "6.2.0",
+    "buildNumber": "85",
+    "plist": "ChineseDailyBreadDev.plist",
+    "changes": [
+      "新增2019年第4季內容",
+      "請在 Development DB 兌換今季內容測試"
+    ]
+  },
+  {
+    "version": "6.2.0",
     "buildNumber": "84",
     "plist": "ChineseDailyBreadDev.plist",
     "changes": [
