@@ -1,5 +1,23 @@
 [
   {
+    "version": "6.2.1",
+    "buildNumber": "90",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "開啓兌換功能",
+      "請在 Production DB 測試"
+    ]
+  },
+  {
+    "version": "6.2.0",
+    "buildNumber": "87",
+    "plist": "ChineseDailyBreadDev.plist",
+    "changes": [
+      "新增2019年第4季內容",
+      "請在 Development DB 兌換今季內容測試"
+    ]
+  },
+  {
     "version": "6.2.0",
     "buildNumber": "86",
     "plist": "ChineseDailyBreadDev.plist",

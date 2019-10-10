@@ -4,6 +4,7 @@ var fs = require('fs');
 var path = require('path');
 var uploader = require('github-ipa-uploader');
 var opn = require('opn');
+const program = require('commander');
 
 function updateReleasesJson(version, build, plist) {
 
@@ -126,6 +127,22 @@ function githubOauth() {
 }
 
 
+var ipaName;
+program
+  .option('-m, --mode', 'dev or adhoc');
+
+program.parse(process.argv);
+
+if (program.mode === 'dev') {
+  ipaName = 'ChineseDailyBreadDev.ipa';
+} else if (program.mode === 'adhoc') {
+  ipaName = 'ChineseDailyBreadAdhoc.ipa';
+} else {
+  program.help();
+  process.exit(-1);
+}
+
+
 githubOauth().then( token => {
 
   var options = {
@@ -133,7 +150,7 @@ githubOauth().then( token => {
     owner: 'eddy-lau',
     repo: 'cdb-ota',
     binaries: [{
-      path: path.join(__dirname,'..','ChineseDailyBread', 'ChineseDailyBreadAdhoc.ipa'),
+      path: path.join(__dirname,'..','ChineseDailyBread', ipaName),
       iconURL: 'https://eddy-lau.github.io/cdb-ota/AppIcon-120x120.png'
     }],
     tagPrefix: 'cdb'
