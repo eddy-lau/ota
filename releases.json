@@ -1,5 +1,16 @@
 [
   {
+    "version": "6.2.2",
+    "buildNumber": "91",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "修正 iOS 13 彈 App 問題。",
+      "修正11月1日及11月9日內容。",
+      "新增兌換功能使用說明。",
+      "請在 Production DB 測試。"
+    ]
+  },
+  {
     "version": "6.2.1",
     "buildNumber": "90",
     "plist": "ChineseDailyBreadAdhoc.plist",
