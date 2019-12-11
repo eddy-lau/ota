@@ -1,6 +1,15 @@
 [
   {
     "version": "6.3.0",
+    "buildNumber": "93",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "修正2020年第1季內容。",
+      "請在 Production DB 測試。"
+    ]
+  },
+  {
+    "version": "6.3.0",
     "buildNumber": "92",
     "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [

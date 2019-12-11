@@ -132,7 +132,7 @@ program
   .option('-m, --mode <build-mode>', 'dev or adhoc');
 
 program.parse(process.argv);
-console.log(program);
+// console.log(program);
 
 if (program.mode === 'dev') {
   ipaName = 'ChineseDailyBreadDev.ipa';
