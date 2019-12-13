@@ -1,6 +1,15 @@
 [
   {
     "version": "6.3.0",
+    "buildNumber": "96",
+    "plist": "ChineseDailyBreadDev.plist",
+    "changes": [
+      "Development DB 版本",
+      "用作測試轉移購買功能。"
+    ]
+  },
+  {
+    "version": "6.3.0",
     "buildNumber": "95",
     "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
