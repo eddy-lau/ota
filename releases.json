@@ -1,5 +1,15 @@
 [
   {
+    "version": "6.3.1",
+    "buildNumber": "97",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "未登入不能兌換",
+      "以 Firebase Phone Login 取代 AccountKit",
+      "請在 Production DB 測試。"
+    ]
+  },
+  {
     "version": "6.3.0",
     "buildNumber": "96",
     "plist": "ChineseDailyBreadDev.plist",
