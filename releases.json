@@ -1,6 +1,14 @@
 [
   {
     "version": "6.4.0",
+    "buildNumber": "103",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "第三次修正2020年第2季內容。"
+    ]
+  },
+  {
+    "version": "6.4.0",
     "buildNumber": "102",
     "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
