@@ -1,5 +1,13 @@
 [
   {
+    "version": "6.5.0",
+    "buildNumber": "110",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "經文分段格式整理：可出詩歌體裁。"
+    ]
+  },
+  {
     "version": "6.4.1",
     "buildNumber": "108",
     "plist": "ChineseDailyBreadAdhoc.plist",
