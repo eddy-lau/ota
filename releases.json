@@ -1,6 +1,15 @@
 [
   {
     "version": "6.5.0",
+    "buildNumber": "113",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "經文分段格式整理：可出詩歌體裁。",
+      "註䆁用彈出方式顯示。"
+    ]
+  },
+  {
+    "version": "6.5.0",
     "buildNumber": "111",
     "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
