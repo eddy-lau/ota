@@ -1,5 +1,14 @@
 [
   {
+    "version": "6.5.1",
+    "buildNumber": "119",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "第二次修正2020年第3季內容。",
+      "修正 iOS 12 經文顯示問題。"
+    ]
+  },
+  {
     "version": "6.5.0",
     "buildNumber": "118",
     "plist": "ChineseDailyBreadAdhoc.plist",
