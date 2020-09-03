@@ -1,10 +1,10 @@
 [
   {
     "version": "6.6.0",
-    "buildNumber": "124",
+    "buildNumber": "125",
     "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
-      "第一次修正2020年第4季內容。",
+      "第二次修正2020年第4季內容。",
       "新增讀者賬戶 Log Viewer。",
       "更增五年續經計劃。"
     ]
