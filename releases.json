@@ -1,5 +1,13 @@
 [
   {
+    "version": "6.6.1",
+    "buildNumber": "126",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "可掃瞄在手機相片庫內的兌換碼。"
+    ]
+  },
+  {
     "version": "6.6.0",
     "buildNumber": "125",
     "plist": "ChineseDailyBreadAdhoc.plist",
