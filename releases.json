@@ -1,6 +1,15 @@
 [
   {
     "version": "6.7.0",
+    "buildNumber": "136",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "修正2021年第1季專文內容。",
+      "以HTML格式顯示最近兩季專文。"
+    ]
+  },
+  {
+    "version": "6.7.0",
     "buildNumber": "135",
     "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
