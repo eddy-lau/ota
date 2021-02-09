@@ -11,11 +11,16 @@
   "author": "Eddie Lau",
   "license": "ISC",
   "dependencies": {
+    "async": "^3.2.0",
     "commander": "^3.0.2",
-    "github-ipa-uploader": "file:../github-ipa-uploader",
+    "github-ipa-uploader": "link:../github-ipa-uploader",
     "github-oauth": "^0.2.2",
     "http-shutdown": "^1.2.0",
     "opn": "^5.5.0"
+  },
+  "resolutions": {
+    "github-ipa-uploader/**/decompress-zip": "^0.2.2",
+    "github-ipa-uploader/**/graceful-fs": "^4.1.2"
   },
   "devDependencies": {
     "http-server": "^0.12.0"

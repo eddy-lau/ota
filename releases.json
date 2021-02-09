@@ -1,5 +1,16 @@
 [
   {
+    "version": "6.8.0",
+    "buildNumber": "137",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "新增2021年第2季內容。",
+      "以HTML格式顯示簡介。",
+      "支援Bold字體",
+      "書卷第一日自動顯示簡介。"
+    ]
+  },
+  {
     "version": "6.7.0",
     "buildNumber": "136",
     "plist": "ChineseDailyBreadAdhoc.plist",
