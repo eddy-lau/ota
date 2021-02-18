@@ -1,6 +1,15 @@
 [
   {
     "version": "6.8.0",
+    "buildNumber": "138",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "在書架顯示已兌換但未出版項目(書花功能)。",
+      "修正簡介轉字體問題"
+    ]
+  },
+  {
+    "version": "6.8.0",
     "buildNumber": "137",
     "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
