@@ -1,6 +1,14 @@
 [
   {
     "version": "6.8.0",
+    "buildNumber": "141",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "第二次修正2021手第二季內容。"
+    ]
+  },
+  {
+    "version": "6.8.0",
     "buildNumber": "140",
     "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
