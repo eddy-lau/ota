@@ -1,5 +1,14 @@
 [
   {
+    "version": "6.8.1",
+    "buildNumber": "142",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "修正iOS12不斷顯示簡介問題。",
+      "加入 Foster iPhone SE."
+    ]
+  },
+  {
     "version": "6.8.0",
     "buildNumber": "141",
     "plist": "ChineseDailyBreadAdhoc.plist",
