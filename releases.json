@@ -1,5 +1,13 @@
 [
   {
+    "version": "6.8.2",
+    "buildNumber": "143",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "書架顯示一年訂閱預購項目。"
+    ]
+  },
+  {
     "version": "6.8.1",
     "buildNumber": "142",
     "plist": "ChineseDailyBreadAdhoc.plist",
