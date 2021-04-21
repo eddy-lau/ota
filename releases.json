@@ -1,5 +1,13 @@
 [
   {
+    "version": "6.9.0",
+    "buildNumber": "146",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "推送通知，支援 Hyperlink。"
+    ]
+  },
+  {
     "version": "6.8.2",
     "buildNumber": "145",
     "plist": "ChineseDailyBreadAdhoc.plist",
