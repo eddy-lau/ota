@@ -1,6 +1,14 @@
 [
   {
     "version": "6.10.0",
+    "buildNumber": "149",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "第一次修正2021年第三季內容。"
+    ]
+  },
+  {
+    "version": "6.10.0",
     "buildNumber": "148",
     "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
