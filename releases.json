@@ -4,7 +4,8 @@
     "buildNumber": "151",
     "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
-      "更新《簡介／專文》按鈕顏色。"
+      "更新《簡介／專文》按鈕顏色。",
+      "修正在作者版面專文重複問題。"
     ]
   },
   {
