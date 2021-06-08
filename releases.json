@@ -1,6 +1,14 @@
 [
   {
     "version": "6.10.0",
+    "buildNumber": "150",
+    "plist": "ChineseDailyBreadAdhoc.plist",
+    "changes": [
+      "更新《簡介／專文》按鈕顏色。"
+    ]
+  },
+  {
+    "version": "6.10.0",
     "buildNumber": "149",
     "plist": "ChineseDailyBreadAdhoc.plist",
     "changes": [
